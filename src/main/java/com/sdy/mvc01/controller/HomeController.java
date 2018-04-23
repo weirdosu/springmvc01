@@ -10,7 +10,7 @@ public class HomeController {
     @RequestMapping(path = "/index") //请求映射
     public String index(Model model){
         model.addAttribute("message","Hello Spring MVC!");
-        return "index";
+        return "home/index";
     }
 
 }
