@@ -36,6 +36,9 @@ public class UserDAO implements IUserDAO {
     }
     /**添加*/
     public boolean add(User user){
+        if(user.getId()<=0){
+            user.setId(users.get(users.size()-1).getId()+1);
+        }
         users.add(user);
         return true;
     }
