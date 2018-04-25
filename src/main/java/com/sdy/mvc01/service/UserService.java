@@ -14,7 +14,8 @@ import java.util.List;
 @Service
 public class UserService {
 
-    @Autowired
+//    @Autowired
+    @Resource(name = "mysql")
     IUserDAO userdao;
 
     public List<User> queryAllUsers(){

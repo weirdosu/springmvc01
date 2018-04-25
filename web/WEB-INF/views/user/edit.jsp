@@ -32,18 +32,22 @@
         <input name="name" id="name" type="text" required="required" maxlength="32" value="${user.name}"/>
     </p>
     <p>
+        <label for="birthday">生日：</label>
+        <input name="birthday" id="birthday" required="required" maxlength="32" value="${user.birthday}" />
+    </p>
+    <p>
         <label for="address">地址：</label>
         <input name="address" id="address" type="text" required="required" maxlength="128" value="${user.address}"/>
     </p>
     <p>
         <label for="phone">电话：</label>
-        <input name="phone" id="phone" type="text" required="required" maxlength="11" value="${user.phone}"/>
+        <input name="phone" id="phone" type="tel" required="required" maxlength="11" value="${user.phone}"/>
     </p>
     <p>
         <button>提交</button>
     </p>
 </fieldset>
 </form>
-<a href="index">列表</a>
+<a href="../index">列表</a>
 </body>
 </html>

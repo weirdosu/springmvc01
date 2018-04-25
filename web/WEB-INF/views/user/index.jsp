@@ -24,6 +24,7 @@
     <tr>
         <th>编号</th>
         <th>姓名</th>
+        <th>生日</th>
         <th>地址</th>
         <th>电话</th>
         <th>操作</th>
@@ -32,6 +33,7 @@
         <tr>
             <td>${user.id}</td>
             <td>${user.name}</td>
+            <td>${user.birthday}</td>
             <td>${user.address}</td>
             <td>${user.phone}</td>
             <td>

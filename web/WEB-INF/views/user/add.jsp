@@ -28,12 +28,16 @@
         <input name="name" id="name" type="text" required="required" maxlength="32"/>
     </p>
     <p>
+        <label for="birthday">生日：</label>
+        <input name="birthday" id="birthday" type="date" required="required" maxlength="32"/>
+    </p>
+    <p>
         <label for="address">地址：</label>
         <input name="address" id="address" type="text" required="required" maxlength="128"/>
     </p>
     <p>
         <label for="phone">电话：</label>
-        <input name="phone" id="phone" type="text" required="required" maxlength="11"/>
+        <input name="phone" id="phone" type="tel" required="required" maxlength="11"/>
     </p>
     <p>
         <button>提交</button>

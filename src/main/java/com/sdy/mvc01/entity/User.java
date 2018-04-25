@@ -1,5 +1,11 @@
 package com.sdy.mvc01.entity;
 
+//import com.fasterxml.jackson.annotation.JsonFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.Date;
+
 /**
  * 用户
  */
@@ -8,6 +14,11 @@ public class User {
     private int id;
     /**姓名*/
     private String name;
+    /**
+     * 出生日期
+     */
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd")
+    private Date birthday;
     /**地址*/
     private  String address;
     /**电话*/
@@ -16,9 +27,10 @@ public class User {
     public User() {
     }
 
-    public User(int id, String name, String address, String phone) {
+    public User(int id, String name,Date birthday, String address, String phone) {
         this.id = id;
         this.name = name;
+        this.birthday=birthday;
         this.address = address;
         this.phone = phone;
     }
@@ -53,5 +65,13 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 }

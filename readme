@@ -1,0 +1,48 @@
+这是一个简单的springmvc制作的例子：
+用到的知识点有 maven springmvc servlet jsp mysql
+测试：http://localhost:8080/user/index
+http://localhost:8080/user/user
+http://localhost:8080/user/userJson
+mysql:文件为schoolmis.sql
+**************分割线**************
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : mysql
+Source Server Version : 50722
+Source Host           : localhost:3306
+Source Database       : schoolmis
+
+Target Server Type    : MYSQL
+Target Server Version : 50722
+File Encoding         : 65001
+
+Date: 2018-04-25 15:45:03
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `user`
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
+  `name` varchar(32) NOT NULL COMMENT '姓名',
+  `birthday` date DEFAULT NULL COMMENT '生日',
+  `address` varchar(128) DEFAULT NULL COMMENT '地址',
+  `phone` varchar(11) DEFAULT NULL COMMENT '电话',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', '张学友', '1990-06-06', '中国香港', '18989890098');
+INSERT INTO `user` VALUES ('2', '刘德华', '2010-07-21', '中国广东', '17862716235');
+INSERT INTO `user` VALUES ('3', '周星驰', '1997-04-20', '中国河北', '17862716324');
+INSERT INTO `user` VALUES ('4', '周迅', '1997-05-04', '中国湖南', '18901110001');
+INSERT INTO `user` VALUES ('5', '成龙', '2018-04-11', '中国山东', '17863101122');
+
+**************分割线**************
+项目用idea编辑器制作；欢迎参考
